@@ -1,8 +1,9 @@
-using UnityEngine;
+using UnityEngine.InputSystem;
 
-[CreateAssetMenu(fileName = "Player", menuName = "Scriptable Objects/Player")]
-public class Player : ScriptableObject
+public class Player
 {
-    public Character character;
-    public int score;
+    public Character Character = Character.Unset;
+    public int Score;
+    
+    public InputActionAsset InputActionAsset;
 }
