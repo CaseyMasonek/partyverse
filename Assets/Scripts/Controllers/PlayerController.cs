@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Test : MonoBehaviour
+public class PlayerController : MonoBehaviour, IMovementController
 {
     private InputAction _move;
     private PlayerInput _playerInput;
@@ -9,18 +9,13 @@ public class Test : MonoBehaviour
 
     private bool _isInputAssigned;
 
-    [SerializeField] private int playerIndex;
-
-    private void Start()
-    {
-        _player = Game.players[playerIndex];
-    }
-
-    private void Update()
+    public Vector2 GetMovement(int playerIndex)
     {
         if (!_isInputAssigned)
         {
-            if (_player is null || _player.InputActionAsset is null) return;
+            _player = Game.players[playerIndex];
+            
+            if (_player is null || _player.InputActionAsset is null) return Vector2.zero;
         
             _move = _player.InputActionAsset.FindAction("Move");
             
@@ -29,6 +24,6 @@ public class Test : MonoBehaviour
         
         Vector2 dir = _move.ReadValue<Vector2>();
         
-        transform.Translate(dir * 3 * Time.deltaTime);
+        return dir;
     }
 }
