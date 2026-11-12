@@ -5,14 +5,12 @@ public class AssignInput : MonoBehaviour
 {
     private PlayerInput _playerInput;
     private Player _player;
-
-    private static int _playerCount;
-
+    
     private void Start()
     {
-        _player = Game.players[_playerCount];
+        _player = Game.players[Game.playersIn];
 
-        _playerCount++;
+        Game.playersIn++;
         
         _playerInput = GetComponent<PlayerInput>();
         
