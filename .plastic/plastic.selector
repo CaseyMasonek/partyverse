@@ -1,4 +1,0 @@
-repository "Partyverse!/Partyverse!@1375934688071@cloud"
-  path "/"
-    br "/main"
-    co "/main"
