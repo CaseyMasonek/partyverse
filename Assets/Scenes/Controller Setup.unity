@@ -1164,6 +1164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1117984489}
   - component: {fileID: 1117984488}
+  - component: {fileID: 1117984490}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -1182,8 +1183,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b96f02affd41047f091e99ab3197cbac, type: 3}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -1283,6 +1284,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117984490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117984487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f1378cb08a543a7b0cfa8f3f497808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuMusic
+  controllerSetupMusic: {fileID: 8300000, guid: b96f02affd41047f091e99ab3197cbac, type: 3}
+  menuMusic: {fileID: 8300000, guid: 627c82caee5ce43a6a592864fb5b1107, type: 3}
 --- !u!1 &1271939848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,7 +1722,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SampleScene
+          m_StringArgument: Title Screen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1979409421
