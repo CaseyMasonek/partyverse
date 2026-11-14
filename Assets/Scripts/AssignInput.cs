@@ -16,7 +16,8 @@ public class AssignInput : MonoBehaviour
         
         Debug.Log(Game.players[0]);
         
-        _player.InputActionAsset = _playerInput.actions;
+        _player.Actions = _playerInput.actions;
+        _player.Device = _playerInput.devices[0];
         
         Destroy(this);
     }

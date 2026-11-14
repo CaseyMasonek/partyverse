@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour, IMovementController
 {
@@ -15,15 +16,25 @@ public class PlayerController : MonoBehaviour, IMovementController
         {
             _player = Game.players[playerIndex];
             
-            if (_player is null || _player.InputActionAsset is null) return Vector2.zero;
-        
-            _move = _player.InputActionAsset.FindAction("Move");
+            if (_player is null || _player.Actions is null) return Vector2.zero;
+            
+            _player.Actions.devices = new [] { _player.Device };
+            
+            _move = _player.Actions.FindAction("Move");
+            _move.Enable();
             
             _isInputAssigned = true;
         }
         
         Vector2 dir = _move.ReadValue<Vector2>();
         
+        Debug.DrawLine(Vector2.zero,transform.position, Color.yellow);
+        
         return dir;
+    }
+
+    private void OnDestroy()
+    {
+        _move.Disable();
     }
 }

@@ -5,5 +5,6 @@ public class Player
     public Character Character = Character.Unset;
     public int Score;
     
-    public InputActionAsset InputActionAsset;
+    public InputActionAsset Actions;
+    public InputDevice Device;
 }
