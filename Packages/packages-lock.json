@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.slenkerlab.switchcontrollerinput": {
+      "version": "https://github.com/schlenger/JoyConUnityInputSystem.git?path=/Packages/com.slenkerlab.switchcontrollerinput",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.inputsystem": "1.20.0"
+      },
+      "hash": "ba8fa4b897173a2a4ea3cb39fecdee1fe4de4fc6"
+    },
     "com.unity.2d.animation": {
       "version": "16.0.1",
       "depth": 0,

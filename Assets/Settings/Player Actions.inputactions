@@ -83,6 +83,28 @@
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "655eae2c-574d-4416-bbbc-f6bf60f3d2d2",
+                    "path": "<SwitchJoyConLHID>/leftStick",
+                    "interactions": "",
+                    "processors": "RotateVector2",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3afcdc89-a603-437f-b8ad-f1442759f23a",
+                    "path": "<SwitchJoyConRHID>/rightStick",
+                    "interactions": "",
+                    "processors": "RotateVector2(degrees=-90)",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
