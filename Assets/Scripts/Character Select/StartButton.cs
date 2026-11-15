@@ -37,6 +37,12 @@ public class StartButton : MonoBehaviour
 
     private IEnumerator StartGame()
     {
+        AudioSource[] allAudioSources = FindObjectsByType<AudioSource>();
+        foreach (AudioSource audio in allAudioSources)
+        {
+            audio.Stop();
+        }
+        
         Camera.main!.backgroundColor = Color.gray6;
         _audioSource.Play();
         yield return new WaitForSeconds(2.5f);
