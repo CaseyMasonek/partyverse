@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class CharacterSelection : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Character character;
-
+    
     private Button _button;
     private Image _image;
+    private AudioSource _audioSource;
     
     private VirtualMouseInput[] _mice;
     
@@ -18,10 +19,13 @@ public class CharacterSelection : MonoBehaviour, IPointerClickHandler
         _mice = FindObjectsByType<VirtualMouseInput>();
         _button = GetComponent<Button>();
         _image = GetComponent<Image>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (!_button.interactable) return;
+        
         Debug.Log(eventData.pointerId);
         
         VirtualMouseInput mouse = GetVirtualMouse(eventData.pointerId);
@@ -33,7 +37,9 @@ public class CharacterSelection : MonoBehaviour, IPointerClickHandler
         _image.color = mouse.gameObject.GetComponent<Image>().color;
         mouse.enabled = false;
         
-        Debug.Log(Game.players[playerIndex].Character);
+        _audioSource.Play();
+
+        Game.charchtersSelected++;
     }
     
     private VirtualMouseInput GetVirtualMouse(int pointerId)

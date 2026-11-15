@@ -6,4 +6,5 @@ public static class Game
     public static int round = 0;
     
     public static int playersIn = 0;
+    public static int charchtersSelected = 0;
 }
