@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,8 @@ public class MenuMusic : MonoBehaviour
     [SerializeField] private AudioClip controllerSetupMusic;
     [SerializeField] private AudioClip menuMusic;
 
+    private string[] drumMenus = { "Title Screen", "Character Select" };
+    
     private float _time;
     
     private void OnEnable()
@@ -39,10 +42,8 @@ public class MenuMusic : MonoBehaviour
             _audioSource.clip = controllerSetupMusic;
             _audioSource.Play();
         }
-        else if (SceneManager.GetActiveScene().name == "Title Screen")
+        else if (drumMenus.Contains(SceneManager.GetActiveScene().name))
         {
-            Debug.Log(SceneManager.GetActiveScene().name +"!!!");
-            
             _audioSource.clip = menuMusic;
             _audioSource.time = _time;
             _audioSource.Play();

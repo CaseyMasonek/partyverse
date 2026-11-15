@@ -1,0 +1,51 @@
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem.UI;
+using UnityEngine.UI;
+
+public class CharacterSelection : MonoBehaviour, IPointerClickHandler
+{
+    [SerializeField] private Character character;
+
+    private Button _button;
+    private Image _image;
+    
+    private VirtualMouseInput[] _mice;
+    
+    private void Start()
+    {
+        _mice = FindObjectsByType<VirtualMouseInput>();
+        _button = GetComponent<Button>();
+        _image = GetComponent<Image>();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log(eventData.pointerId);
+        
+        VirtualMouseInput mouse = GetVirtualMouse(eventData.pointerId);
+        int playerIndex = mouse.GetComponent<Cursor>().playerIndex;
+        
+        Game.players[playerIndex].Character = character;
+
+        _button.interactable = false;
+        _image.color = mouse.gameObject.GetComponent<Image>().color;
+        mouse.enabled = false;
+        
+        Debug.Log(Game.players[playerIndex].Character);
+    }
+    
+    private VirtualMouseInput GetVirtualMouse(int pointerId)
+    {
+        foreach (VirtualMouseInput mouse in _mice)
+        {
+            if (mouse.virtualMouse is not null && mouse.virtualMouse.deviceId == pointerId)
+            {
+                return mouse;
+            }
+        }
+
+        return null;
+    }
+}

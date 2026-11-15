@@ -890,6 +890,17 @@
                 },
                 {
                     "name": "",
+                    "id": "36ae52d5-bcd2-4a55-b0a4-5e3e991a2b42",
+                    "path": "<SwitchJoyConRHID>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Joystick",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "82627dcc-3b13-4ba9-841d-e4b746d6553e",
                     "path": "*/{Cancel}",
                     "interactions": "",
