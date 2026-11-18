@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour, IMovementController
     private Player _player;
     private bool _isInputAssigned;
     
+    public int playerIndex;
     
-    private void SetupInput(int playerIndex)
+    
+    private void SetupInput()
     {
         _player = Game.players[playerIndex];
 
@@ -30,9 +32,9 @@ public class PlayerController : MonoBehaviour, IMovementController
         
     }
 
-    public Vector2 GetMovement(int playerIndex)
+    public Vector2 GetMovement()
     {
-        if (!_isInputAssigned) SetupInput(playerIndex);
+        if (!_isInputAssigned) SetupInput();
         
         if (_player is null || _player.Actions is null) return Vector2.zero;
         
@@ -47,9 +49,9 @@ public class PlayerController : MonoBehaviour, IMovementController
         _click.Disable();
     }
 
-    public InputActionAsset GetInputActions(int playerIndex)
+    public InputActionAsset GetInputActions()
     {
-        if (!_isInputAssigned) SetupInput(playerIndex);
+        if (!_isInputAssigned) SetupInput();
         return _player.Actions;
     }
 }

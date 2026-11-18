@@ -29,7 +29,7 @@ public class CharacterSelection : MonoBehaviour, IPointerClickHandler
         Debug.Log(eventData.pointerId);
         
         VirtualMouseInput mouse = GetVirtualMouse(eventData.pointerId);
-        int playerIndex = mouse.GetComponent<Cursor>().playerIndex;
+        int playerIndex = mouse.GetComponent<PlayerController>().playerIndex;
         
         Game.players[playerIndex].Character = character;
 

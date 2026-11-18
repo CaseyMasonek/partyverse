@@ -5,7 +5,6 @@ using UnityEngine.InputSystem.UI;
 [RequireComponent(typeof(PlayerController))]
 public class Cursor : MonoBehaviour
 {
-    public int playerIndex;
     private VirtualMouseInput _input;
     private PlayerController _playerController;
     private InputActionAsset _inputActions;
@@ -17,7 +16,7 @@ public class Cursor : MonoBehaviour
     {
         _input = GetComponent<VirtualMouseInput>();
         _playerController = GetComponent<PlayerController>();
-        _inputActions = _playerController.GetInputActions(playerIndex);
+        _inputActions = _playerController.GetInputActions();
 
         _moveAction = _inputActions.FindAction("Move");
         _pressAction = _inputActions.FindAction("Click");

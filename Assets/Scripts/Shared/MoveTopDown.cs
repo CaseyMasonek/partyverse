@@ -5,8 +5,6 @@ using UnityEngine.InputSystem;
 public class MoveTopDown : MonoBehaviour
 {
     private PlayerController _playerController;
-    
-    [SerializeField] private int playerIndex;
 
     private void Start()
     {
@@ -15,7 +13,7 @@ public class MoveTopDown : MonoBehaviour
     
     private void Update()
     {
-        Vector2 dir = _playerController.GetMovement(playerIndex);
+        Vector2 dir = _playerController.GetMovement();
         
         transform.Translate(dir * 3 * Time.deltaTime);
     }

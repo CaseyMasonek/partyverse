@@ -540,7 +540,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b176c4764c0c462092c292cd01b8c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cursor
-  playerIndex: 1
 --- !u!114 &310001457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37be2fe99cc5428fb7f367311dea0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  playerIndex: 1
 --- !u!114 &310001458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,7 +1091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b176c4764c0c462092c292cd01b8c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cursor
-  playerIndex: 3
 --- !u!114 &789284129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,6 +1103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37be2fe99cc5428fb7f367311dea0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  playerIndex: 3
 --- !u!114 &789284130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,7 +2283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b176c4764c0c462092c292cd01b8c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cursor
-  playerIndex: 0
 --- !u!114 &1270439240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2296,6 +2295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37be2fe99cc5428fb7f367311dea0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  playerIndex: 0
 --- !u!1 &1374118973
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,7 +2713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b176c4764c0c462092c292cd01b8c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cursor
-  playerIndex: 2
 --- !u!114 &1992683013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2726,6 +2725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e37be2fe99cc5428fb7f367311dea0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  playerIndex: 2
 --- !u!114 &1992683014
 MonoBehaviour:
   m_ObjectHideFlags: 0
