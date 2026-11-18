@@ -130,7 +130,7 @@
                 {
                     "name": "",
                     "id": "a9273b4c-ccc0-4bd1-b82c-d05e9caed19c",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "*/{Submit}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
